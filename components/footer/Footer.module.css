@@ -1,0 +1,10 @@
+.footerText {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #545454;
+}
+
+.footerText a {
+    color: green;
+    text-decoration: none;
+}
