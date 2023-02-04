@@ -1,0 +1,55 @@
+.socialIcon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.facebook {
+    color: #4267B2
+}
+
+.youtube {
+    color: #FF0000
+}
+
+.email {
+    color: #008E48
+}
+
+.phone {
+    color: #008E48
+}
+
+.headerWrapper {
+    background-color: var(--main-color);
+}
+
+.headerItemsWrapper {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.headerItemsWrapper li {
+    margin-left: 2rem;
+}
+
+.headerItemsWrapper li:first-child {
+    margin-left: 0;
+    padding: 10px 0;
+
+}
+
+.headerItemsWrapper li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.headerItemsWrapper li a:hover {
+    color: green;
+    transition: 0.2s ease;
+}
+
+.active {
+    color: green;
+}

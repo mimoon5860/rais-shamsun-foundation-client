@@ -6,7 +6,7 @@ import { AiFillFacebook, AiFillYoutube, AiTwotoneMail, AiFillPhone } from 'react
 import { BiDonateHeart } from 'react-icons/bi';
 import { useRouter } from 'next/router';
 import menus from '../../utils/siteData/menuData.json';
-import style from './Header.module.css';
+import style from '../../styles/Header.module.css';
 
 
 const MainHeader = () => {
@@ -42,7 +42,7 @@ const MainHeader = () => {
             </Container>
             <header className={style.headerWrapper}>
                 <Container>
-                    <ul className={style.headerItemsWrapper}>
+                    <ul className={`mb-0 ${style.headerItemsWrapper}`}>
                         {
                             menus.map(item => {
                                 return <li key={item.id}>

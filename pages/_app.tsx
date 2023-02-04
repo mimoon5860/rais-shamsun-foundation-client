@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/contact.css'
 import type { AppProps } from 'next/app'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeLayout from '../components/layouts/HomeLayout';
