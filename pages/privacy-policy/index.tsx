@@ -14,4 +14,4 @@ const PrivacyPolicy: NextPage = () => {
 }
 
 
-export default PrivacyPolicy
+export default PrivacyPolicy;
