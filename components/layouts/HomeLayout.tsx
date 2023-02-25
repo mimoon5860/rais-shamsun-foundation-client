@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React, { FC, PropsWithChildren } from 'react';
 import Footer from '../footer/Footer';
 import MainHeader from '../header/MainHeader';
@@ -13,5 +14,6 @@ const HomeLayout: FC<PropsWithChildren> = ({ children }) => {
         </>
     );
 };
+
 
 export default HomeLayout;

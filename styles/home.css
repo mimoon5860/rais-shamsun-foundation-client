@@ -1,0 +1,18 @@
+.hero_wrapper{
+    background-image: linear-gradient(to right, rgb(233, 233, 233), #7ba4da);
+}
+.hero-bottom-text{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.hero-main-text{
+    font-size: 4rem;
+    font-family: 'Lobster', cursive;
+    line-height: 60px;
+}
+.hero-main-text2{
+    font-size: 3.5rem;
+    font-family: 'Lobster', cursive;
+}
+.photo-preview:hover{
+    cursor: pointer;
+}

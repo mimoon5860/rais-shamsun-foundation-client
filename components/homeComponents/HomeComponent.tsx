@@ -1,65 +1,106 @@
+import { TFunction } from "next-i18next";
 import Image from "next/image";
-import { Button, Card,  Carousel, Col, Container, Row } from "react-bootstrap";
+import Lottie from 'react-lottie';
+import heroLottie from '../../public/hero_lottie.json'
+import { Button, Card, Col, Container, ListGroup, Row } from "react-bootstrap";
+import Link from "next/link";
+import { BiDonateHeart } from "react-icons/bi";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import { useRouter } from "next/router";
+interface homeProps {
+  translate: TFunction
+}
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: heroLottie,
+};
 
-const HomeComponent = () => {
+const HomeComponent = ({ translate }: homeProps) => {
+  const { push } = useRouter();
   return (
     <main>
-      {/* Slider section  */}
-      {/* <Container className="my-4">
-        <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="/slide1.jpg"
-              alt="First slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="/slide2.jpg"
-              alt="Second slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="/slide3.jpg"
-              alt="Third slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="/slide4.jpg"
-              alt="Third slide"
-            />
-          </Carousel.Item>
-        </Carousel>
-      </Container> */}
-      <Container className="my-4">
-        <Row>
-          <Col md={4}>
-            <Image className="p-2" style={{ borderRadius: '50%' }} width={450} height={450} src='/golden-gate.jpg'></Image>
-          </Col>
-          <Col md={8}>
-            <h4 className="text-start border-bottom border-4">
-              Rais Shamsun Foundation
-            </h4>
-            <p>Rais Shamsun Foundation is a non-profit, non-political, and entirely charitable organization dedicated to human welfare. Following the ideals and footsteps of the teacher of humanity, liberator of mankind, and role model of generosity Prophet Muhammad (Saw), this organization is engaged in social reform, inculcation of great morality, establishing employment, poverty alleviation, low cost or free health care, expansion of Islamic teachings and culture, conducting multidisciplinary education projects, continuous program in building a clean mindset, above all using oral, written and modern media to make people obey Allah and abide by His Messenger (Saw).</p>
-            <div>
+      {/* Hero section  */}
+      <div className="hero_wrapper">
+        <Container>
+          <Row style={{ alignItems: 'center' }}>
+            <Col md={6}>
+              <div className="mx-2 mx-md-5">
+                <Lottie options={defaultOptions} />
+              </div>
+            </Col>
+            <Col md={6}>
+              <div className="mt-3 mb-5 ms-0 ms-md-4">
+                <h1 className="hero-main-text text-success">{translate('rais shamsun')}
+                  <br />
+                  <span className="hero-main-text2">{translate('foundation')}</span>
+                </h1>
+                <p className="fs-2">{translate('quate')}</p>
+                <div >
+                  <Link href='/donation'>
+                    <a className='text-decoration-none donate-btn bg-success text-white rounded-1 px-4 py-2'><BiDonateHeart />{" "+translate('donate')}</a>
+                  </Link>
+                </div>
+              </div>
+            </Col>
 
-            </div>
-          </Col>
-        </Row>
-        <div>
+          </Row>
+        </Container>
+      </div>
+
+      <div className="py-4">
+        <Container>
+          <Row >
+            <Col md={4}>
+              <Image className="p-2" alt="islamic baby rais-shamsun foundation" style={{ objectFit: "contain" }} width={350} height={500} src="/islamic_baby.jpg"></Image>
+            </Col>
+            <Col md={8}>
+              <div className="hero-bottom-text py-2 px-3 rounded-2 ">
+                <h4 className="text-start border-bottom border-4 my-2">
+                  {translate("hero title")}
+                </h4>
+                <p>{translate("hero details")}</p>
+                <div>
+                  <ListGroup>
+                    <ListGroup.Item onClick={()=>window.open('https://docs.google.com/document/d/1Yjkb9kycr8dw4HfIDJbecYAAgt7i0ObI','_blank')} className="my-3" action variant="success">
+                    Rais Shumsun January 2023 Appeal
+                    </ListGroup.Item>
+                  </ListGroup>
+                  <ListGroup>
+                    <ListGroup.Item onClick={()=>window.open('/pdf_details/estimation_costing.pdf','_blank')} className="my-3" action variant="success">
+                      Estimation & Costing (Phase 1& 2)
+                    </ListGroup.Item>
+                  </ListGroup>
+                  <ListGroup>
+                    <ListGroup.Item onClick={()=>window.open('/pdf_details/rstimation_1st_floor.pdf','_blank')} className="my-3" action variant="success">
+                    Estimation 1st Floor
+                    </ListGroup.Item>
+                  </ListGroup>
+                  <ListGroup>
+                    <ListGroup.Item onClick={()=>window.open('/pdf_details/front_elevation.pdf','_blank')} className="my-3" action variant="success">
+                    Front Elevation
+                    </ListGroup.Item>
+                  </ListGroup>
+                 
+                  
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <div className="gray-bg py-4">
+        <div className="text-center border-bottom border-white">
+          <h3>Together Let&apos;s Make A Change</h3>
+        </div>
+        <Container className="py-4">
           <Row xs={1} md={2} lg={3} className="g-4">
             <Col >
               <Card className='h-100 text-center'>
-                <Card.Img variant="top" src="/complex.jpg" />
+                <Card.Img height={300} style={{ objectFit: 'cover' }} variant="top" src="/masjid.jpg" />
                 <Card.Body>
                   <Card.Title className="fs-4">Rais-Shamsun Foundation Masjid Complex</Card.Title>
-                  <Card.Text>
+                  <Card.Text style={{ textAlign: 'justify' }}>
                     The Rais-Shamsun Foundation Masjid Complex will be the focal point of the multi-faceted activities of the Rais-Shamsun Foundation for the welfare of the country, nation and ummah. In-Sha-Allah it will be the center of various humanitarian and public welfare projects, including an ideal mosque, a modern madrasah with an integrated syllabus aimed at creating an Islamic scholar to meet the needs of the age.
                   </Card.Text>
                 </Card.Body>
@@ -67,10 +108,10 @@ const HomeComponent = () => {
             </Col>
             <Col >
               <Card className='h-100 text-center'>
-                <Card.Img variant="top" src="/zakat.jpg" />
+                <Card.Img height={300} style={{ objectFit: 'cover' }} variant="top" src="/zakat.jpg" />
                 <Card.Body>
                   <Card.Title className="fs-4">Zakat Fund</Card.Title>
-                  <Card.Text>
+                  <Card.Text style={{ textAlign: 'justify' }}>
                     Your Zakat has the power to transform lives, from sheltering those who have no home, to feeding families who have endured hunger for days on end. Please, donate your Zakat where the need is greatest.
                   </Card.Text>
                 </Card.Body>
@@ -78,7 +119,7 @@ const HomeComponent = () => {
             </Col>
             <Col>
               <Card className='h-100 text-center'>
-                <Card.Img variant="top" src="/general.jpg" />
+                <Card.Img height={300} style={{ objectFit: 'cover' }} variant="top" src="/hand_holding_fund.jpg" />
                 <Card.Body>
                   <Card.Title className="fs-4">General Fund</Card.Title>
                   <Card.Text style={{ textAlign: 'justify' }}>
@@ -89,7 +130,7 @@ const HomeComponent = () => {
             </Col>
             <Col>
               <Card className='h-100 text-center'>
-                <Card.Img variant="top" src="/monthly.jpg" />
+                <Card.Img height={300} style={{ objectFit: 'cover' }} variant="top" src="/monthly.jpg" />
                 <Card.Body>
                   <Card.Title className="fs-4">Monthly Donation Fund</Card.Title>
                   <Card.Text style={{ textAlign: 'justify' }}>
@@ -100,7 +141,7 @@ const HomeComponent = () => {
             </Col>
             <Col>
               <Card className='h-100 text-center'>
-                <Card.Img variant="top" src="/orphan.jpg" />
+                <Card.Img height={300} style={{ objectFit: 'cover' }} variant="top" src="/orphan.jpg" />
                 <Card.Body>
                   <Card.Title className="fs-4">Orphan Fund</Card.Title>
                   <Card.Text style={{ textAlign: 'justify' }}>
@@ -111,7 +152,7 @@ const HomeComponent = () => {
             </Col>
             <Col>
               <Card className='h-100 text-center'>
-                <Card.Img variant="top" src="sadaqah.jpg" />
+                <Card.Img height={300} style={{ objectFit: 'cover' }} variant="top" src="sadaqah.jpg" />
                 <Card.Body>
                   <Card.Title className="fs-4">Sadaqah Jariyah Fund</Card.Title>
                   <Card.Text style={{ textAlign: 'justify' }}>
@@ -121,98 +162,125 @@ const HomeComponent = () => {
               </Card>
             </Col>
           </Row>
+        </Container>
+      </div>
+
+      <div className="my-4">
+        <div className="text-center border-bottom border-dark">
+          <h3>Projects</h3>
         </div>
-      </Container>
-      <Container>
-        <h4 className="text-center">Projects</h4>
-        <Row xs={1} md={3} className="g-4">
-          <Col>
-            <Card className="h-100 bg-success text-white text-center ">
-              <Card.Body>
-                <Card.Title className="fs-2">Self-reliance project</Card.Title>
-                <Card.Text style={{ textAlign: 'justify' }}>
-                  If you feel the need for mass education and Morning Maktab in any part of Bangladesh, let us know and bring us into contact with the locals.
-                </Card.Text>
-                <Button variant="success">Read More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="h-100 bg-success text-white text-center " >
-              <Card.Body>
-                <Card.Title className="fs-2">Iftar and Ramadan food distribution</Card.Title>
-                <Card.Text style={{ textAlign: 'justify' }}>
-                  The Rais-Shamsun Foundation organizes a session called &apos;Majlisus Sunnah&apos; every month to promote pure Islamic teachings, awareness and life-oriented religiosity, ideals, ethics and religious awareness among the common people based on the Qur&apos;an and Sahih Sunnah.
-                </Card.Text>
-                <Button variant="success">Read More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="h-100 bg-success text-white text-center">
-              <Card.Body>
-                <Card.Title className=" fs-2">Tree planting program</Card.Title>
-                <Card.Text style={{ textAlign: 'justify' }}>
-                  The Foundation distributes various Islamic books and leaflets, including the Holy Quran free of charge on behalf of the Foundation as a way for Muslims to gain knowledge about faith, prayer and the rules of Islam.
-                </Card.Text>
-                <Button variant="success">Read More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-      <Container className="my-4">
-        <h4 className="text-center">Videos</h4>
-        <Row xs={1} md={3} className="g-4">
-          <Col>
-            <Card className="h-100 border-0">
-              <Card.Body>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/NtAEj3J2PeE" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
-                <Card.Text>
-                Rais-Shamsun Foundation&apos;s food distribution among distressed and helpless families report 2019
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card  className="h-100 border-0">
-              <Card.Body>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/gS7S1KAmCpI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
-                <Card.Text>
-                Rais-Shamsun Foundation&apos;s Qurbani Report 2019
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card  className="h-100 border-0">
-              <Card.Body>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/GwAqIjxMVQ4" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
-                <Card.Text>
-                Relief distribution report among flood victims 2019
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-        <div  className="d-grid gap-2">
-        <Button variant="success" size="lg">More</Button>
+        <Container className="my-4">
+
+          <Row xs={1} md={3} className="g-4">
+            <Col>
+              <Card className="h-100 bg-success text-white text-center ">
+                <Card.Body>
+                  <Card.Title className="fs-2">Self-reliance project</Card.Title>
+                  <Card.Text style={{ textAlign: 'justify' }}>
+                    If you feel the need for mass education and Morning Maktab in any part of Bangladesh, let us know and bring us into contact with the locals.
+                  </Card.Text>
+                  <Button variant="success">Read More</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card className="h-100 bg-success text-white text-center " >
+                <Card.Body>
+                  <Card.Title className="fs-2">Iftar and Ramadan food distribution</Card.Title>
+                  <Card.Text style={{ textAlign: 'justify' }}>
+                    The Rais-Shamsun Foundation organizes a session called &apos;Majlisus Sunnah&apos; every month to promote pure Islamic teachings, awareness and life-oriented religiosity, ideals, ethics and religious awareness among the common people based on the Qur&apos;an and Sahih Sunnah.
+                  </Card.Text>
+                  <Button variant="success">Read More</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card className="h-100 bg-success text-white text-center">
+                <Card.Body>
+                  <Card.Title className=" fs-2">Tree planting program</Card.Title>
+                  <Card.Text style={{ textAlign: 'justify' }}>
+                    The Foundation distributes various Islamic books and leaflets, including the Holy Quran free of charge on behalf of the Foundation as a way for Muslims to gain knowledge about faith, prayer and the rules of Islam.
+                  </Card.Text>
+                  <Button variant="success">Read More</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      <div className="gray-bg py-4">
+        <div className="text-center border-bottom border-dark">
+          <h3>Videos</h3>
         </div>
-      </Container>
-      <Container className="my-4">
-        <h4 className="text-center mb-4">Gallery</h4>
-        <Row xs={1} md={4} className="g-3">
-          <Col>
-          </Col>
-          <Col></Col>
-          <Col></Col>
-          <Col></Col>
-          <Col></Col>
-          <Col></Col>
-          <Col></Col>
-          <Col></Col>
-        </Row>
-      </Container>
+        <Container className="my-4">
+          <Row xs={1} md={3} className="g-3">
+            <Col >
+              <Card className="h-100 border-0">
+                <Card.Body>
+                  <iframe width="100%" height="250" src="https://www.youtube.com/embed/VfGCk9rVePo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                  <Card.Text>
+                    Rais-Shamsun Foundation&apos;s intro video
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+
+            </Col>
+            <Col >
+              <Card className="h-100 border-0">
+                <Card.Body>
+                  <iframe width="100%" height="250" src="https://www.youtube.com/embed/CNKcnXw1-3s" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                  <Card.Text>
+                    Rais-Shamsun Foundation&apos;s building structure
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+
+            </Col>
+          </Row>
+          <div className="d-grid mt-4 gap-2">
+            <Button onClick={() => push('/videos')} variant="success" size="lg">More</Button>
+          </div>
+        </Container>
+      </div>
+
+      <div className="py-4">
+        <div className="text-center border-bottom border-dark">
+          <h3>Gallery</h3>
+        </div>
+        <Container className="my-4">
+          <PhotoProvider>
+            <Row xs={1} md={4} className="g-5">
+              <Col >
+                <div className="photo-preview p-2 gray-bg rounded-3 ">
+                  <PhotoView src="/ph_1_complete_1.jpg">
+                    <Image width={500} height={500} src="/ph_1_complete_1.jpg" alt="" />
+                  </PhotoView>
+                </div>
+              </Col>
+              <Col >
+                <div className="photo-preview p-2 gray-bg rounded-3 ">
+                  <PhotoView src="/ph_1_complete_2.jpg">
+                    <Image width={500} height={500} src="/ph_1_complete_2.jpg" alt="" />
+                  </PhotoView>
+                </div>
+              </Col>
+              <Col >
+                <div className="photo-preview p-2 gray-bg rounded-3 ">
+                  <PhotoView src="/ph_1_complete_3.jpg">
+                    <Image width={500} height={500} src="/ph_1_complete_3.jpg" alt="" />
+                  </PhotoView>
+                </div>
+              </Col>
+            </Row>
+          </PhotoProvider>
+
+          <div className="d-grid mt-4 gap-2">
+            <Button onClick={() => push('/gallery')} variant="success" size="lg">More</Button>
+          </div>
+        </Container>
+      </div>
+
     </main>
   )
 }

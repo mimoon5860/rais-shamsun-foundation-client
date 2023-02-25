@@ -29,7 +29,7 @@ const PrivacyPolicy: NextPage = () => {
 
         <div>
           <span>Applicable Law:</span><br />
-          <p> By visiting www.assunnahfoundation.org, you agree that the laws of Bangladesh, without regard to principles of conflict of laws, will govern these Conditions of Use and any dispute of any sort that might arise between you and the Rais-Shamsun Foundation.
+          <p> By visiting www.rais-shamsunfoundation.org, you agree that the laws of Bangladesh, without regard to principles of conflict of laws, will govern these Conditions of Use and any dispute of any sort that might arise between you and the Rais-Shamsun Foundation.
           </p>
         </div>
         <div>
@@ -41,6 +41,5 @@ const PrivacyPolicy: NextPage = () => {
     </div>
   )
 }
-
 
 export default PrivacyPolicy;

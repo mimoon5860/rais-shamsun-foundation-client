@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Button, ButtonGroup, Col, Container, Offcanvas, Row } from 'react-bootstrap';
+import { Button, ButtonGroup, Col, Container, ListGroup, Offcanvas, Row } from 'react-bootstrap';
 import Link from 'next/link';
 import { AiFillFacebook, AiFillYoutube, AiTwotoneMail, AiFillPhone, AiOutlineMenu } from 'react-icons/ai';
-import { BiDonateHeart } from 'react-icons/bi';
-import menus from '../../utils/siteData/menuData.json';
+import { FaDonate } from 'react-icons/fa';
+import { BiDonateHeart } from 'react-icons/bi'
 import style from '../../styles/Header.module.css';
-
+import { useRouter } from 'next/router';
+import menus from '../../utils/siteData/menuData.json'
 
 const MainHeader = () => {
     const [show, setShow] = useState(false);
+    const { push, locale, locales, pathname } = useRouter();
+
+    const changeRoute = (path:string) => {
+        setShow(false);
+        push(path);
+    }
+
     return (
         <>
             <Container>
@@ -20,13 +28,14 @@ const MainHeader = () => {
                     <Col>
                         <div className='d-flex pt-1 pb-3 pb-md-none border-bottom border-success-subtle align-items-center justify-content-end'>
                             <AiFillFacebook className={`${style.socialIcon} ${style.facebook}`} />
-                            <AiFillYoutube className={`${style.socialIcon} ${style.youtube}`} />
+                            <AiFillYoutube onClick={() => push('https://www.youtube.com/channel/UCA3fNt2oFCTsrg6AVguSiPw')} className={`${style.socialIcon} ${style.youtube}`} />
                             <AiTwotoneMail className={`${style.socialIcon} ${style.email}`} />
                             <AiFillPhone className={`${style.socialIcon} ${style.phone}`} />
                             <div className='ms-2'>
                                 <ButtonGroup size="sm">
-                                    <Button variant="success">English</Button>
-                                    <Button variant="secondary">বাংলা</Button>
+                                    {locales?.map(l => {
+                                        return <Button className='border border-success' key={l} onClick={() => push(pathname, undefined, { locale: l })} variant={l === locale ? 'success' : 'light'}>{l}</Button>
+                                    })}
                                 </ButtonGroup>
                             </div>
                         </div>
@@ -60,29 +69,29 @@ const MainHeader = () => {
                     </div>
                     <div>
                         <Link href='/donation'>
-                            <a className='text-decoration-none donate-btn bg-success text-white rounded-1 px-4 py-2'><BiDonateHeart /> Donate</a>
+                            <a className='text-decoration-none donate-btn bg-success text-white rounded-1 px-4 py-2'>< FaDonate /> Donation</a>
                         </Link>
                     </div>
 
                 </div>
+
+                {/* Header for phone  */}
                 <div>
                     <Offcanvas show={show} onHide={() => setShow(false)}>
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title><Image height={150} width={250} src="/main-logo.png" alt="" /></Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
-                            <ul >
+                            <ListGroup>
                                 {
                                     menus.map(item => {
-                                        return (
-                                            <Link key={item.id} href={item.path}>
-                                                <li onClick={() => setShow(false)}   >
-                                                    <a>{item.name}</a>
-                                                </li>
-                                            </Link>)
+                                        return (<ListGroup.Item onClick={()=>changeRoute(item.path)} key={item.id} action variant="info">
+                                           {item.name}
+                                        </ListGroup.Item>)
                                     })
                                 }
-                            </ul>
+
+                            </ListGroup>
                         </Offcanvas.Body>
                     </Offcanvas>
                 </div>

@@ -15,7 +15,7 @@ const Donation: NextPage = () => {
         <Row>
           <Col md={6}>
             <div>
-              <video src="/intro.mp4" controls></video>
+            <iframe width="100%" height="350" src="https://www.youtube.com/embed/VfGCk9rVePo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
             <div>
               <p>The likeness of those who spend their wealth in the way of Allah is as the likeness of a grain of corn, which produces seven spikes, a hundred grains in each spike. Allah multiplies for whomever He wills. Allah is Bounteous, Omniscient. [Surah Baqara: verse 261]
@@ -69,12 +69,6 @@ const Donation: NextPage = () => {
           </Col>
         </Row>
 
-        <Row>
-          <Col>
-          </Col>
-          <Col>
-          </Col>
-        </Row>
       </Container>
     </div>
   )
