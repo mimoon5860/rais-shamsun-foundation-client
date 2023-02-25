@@ -23,7 +23,7 @@ const MainHeader = () => {
             <Container>
                 <Row >
                     <Col>
-                        <Image height={150} width={250} src="/main-logo.png" alt="" />
+                        <Image onClick={()=>push('/')} height={150} width={250} src="/main-logo.png" alt="" />
                     </Col>
                     <Col>
                         <div className='d-flex pt-1 pb-3 pb-md-none border-bottom border-success-subtle align-items-center justify-content-end'>
@@ -79,7 +79,7 @@ const MainHeader = () => {
                 <div>
                     <Offcanvas show={show} onHide={() => setShow(false)}>
                         <Offcanvas.Header closeButton>
-                            <Offcanvas.Title><Image height={150} width={250} src="/main-logo.png" alt="" /></Offcanvas.Title>
+                            <Offcanvas.Title><Image onClick={()=>changeRoute('/')} height={150} width={250} src="/main-logo.png" alt="" /></Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <ListGroup>
