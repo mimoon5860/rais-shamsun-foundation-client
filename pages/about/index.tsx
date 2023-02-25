@@ -10,7 +10,7 @@ const About: NextPage = () => {
         <meta name="description" content="About Rais-Shamsun Foundation" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <h1 className='text-center contact-header py-3 text-white'>About</h1>
+      <h1 className='text-center page-header py-3 text-white'>About</h1>
       <Container>
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row>
@@ -40,15 +40,15 @@ const About: NextPage = () => {
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   <h4>Rais-Shamsun Foundation</h4>
-                  <p>The Rais-Shamsun Foundation is a non-political, non-profitable government-registered organization dedicated to education, da'wah and full human welfare. It was established in 2018 by Shaikh Ahmadullah. He is the chairman of the organization and manages it directly. Rais-Shamsun Foundation was registered in 2019 from Joint Stock, Whose registration number is S-13111/2019. Since then, it has been working rigorously to serve the humanity, reform the society, developing the utmost morality, arrange various activities to build up a neat and clean mentality and ultimately to build up an ideal society following in the footsteps of the Prophet Muhammad, the teacher of humanity, the messenger of human liberation and peace and the ideal of human welfare. One of the goals of Rais-Shamsun Foundation is to build life and society based on the Quran and Sunnah and to propagate and spread authentic knowledge. It is our policy to adopt a moderate approach based on the Qur'an and Sunnah following the path of the righteous predecessors.</p>
+                  <p>The Rais-Shamsun Foundation is a non-political, non-profitable government-registered organization dedicated to education, dawah and full human welfare. It was established in 2018 by Shaikh Ahmadullah. He is the chairman of the organization and manages it directly. Rais-Shamsun Foundation was registered in 2019 from Joint Stock, Whose registration number is S-13111/2019. Since then, it has been working rigorously to serve the humanity, reform the society, developing the utmost morality, arrange various activities to build up a neat and clean mentality and ultimately to build up an ideal society following in the footsteps of the Prophet Muhammad, the teacher of humanity, the messenger of human liberation and peace and the ideal of human welfare. One of the goals of Rais-Shamsun Foundation is to build life and society based on the Quran and Sunnah and to propagate and spread authentic knowledge. It is our policy to adopt a moderate approach based on the Qur&apos;an and Sunnah following the path of the righteous predecessors.</p>
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
                   <h4>Principles and Norms</h4>
                   <ListGroup as="ol">
                     <ListGroup.Item as="li">The Holy Quran and the Sunnah of the Messenger of Allah (peace be upon him) are the main ideals of the Rais-Shamsun Foundation.</ListGroup.Item>
-                    <ListGroup.Item as="li">It accepts the Qur'an and Sunnah in the light of the interpretation of the Salafe Salihin.</ListGroup.Item>
-                    <ListGroup.Item as="li">It nurtures the aqeedah and vision of Ahlus-Sunnah wal-Jama’ah.</ListGroup.Item>
-                    <ListGroup.Item as="li">It calls for shirk-free faith and bid‘at-free practices.</ListGroup.Item>
+                    <ListGroup.Item as="li">It accepts the Qur&apos;an and Sunnah in the light of the interpretation of the Salafe Salihin.</ListGroup.Item>
+                    <ListGroup.Item as="li">It nurtures the aqeedah and vision of Ahlus-Sunnah wal-Jama&apos;ah.</ListGroup.Item>
+                    <ListGroup.Item as="li">It calls for shirk-free faith and bid&apos;at-free practices.</ListGroup.Item>
                     <ListGroup.Item as="li">It works for the unity and solidarity of the Ummah.</ListGroup.Item>
                     <ListGroup.Item as="li">It adopts moderation by avoiding extreme polarization as much as possible on divisive issues.</ListGroup.Item>
                     <ListGroup.Item as="li">It refrains from taking political action and position and work for the greater good of all irrespective of party affiliation.</ListGroup.Item>
@@ -56,7 +56,7 @@ const About: NextPage = () => {
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
                   <h4>Goals and Objectives</h4>
-                  <p>The goal of the Rais-Shamsun Foundation is to gain the satisfaction of the Almighty Allah by conducting da'wah activities to prevent evil deeds in the light of the lifestyle of the Prophet (peace be upon him).</p>
+                  <p>The goal of the Rais-Shamsun Foundation is to gain the satisfaction of the Almighty Allah by conducting da&apos;wah activities to prevent evil deeds in the light of the lifestyle of the Prophet (peace be upon him).</p>
                   <ListGroup as="ol">
                     <ListGroup.Item as="li">Institutional and sub-institutional Islamic and general education and career-oriented technical training initiatives across the country, especially in the comparatively neglected sections of society</ListGroup.Item>
                     <ListGroup.Item as="li">service to humanity and</ListGroup.Item>
@@ -65,7 +65,7 @@ const About: NextPage = () => {
                 </Tab.Pane>
                 <Tab.Pane eventKey="fourth">
                   <h4>Activities</h4>
-                  <p>The Rais-Shamsun Foundation mainly works in three sectors: education, service and da'wah.</p>
+                  <p>The Rais-Shamsun Foundation mainly works in three sectors: education, service and da&apos;wah.</p>
                   <h4>Educational activities</h4>
                   <ListGroup as="ol">
                     <ListGroup.Item as="li">Preparation of modern up-to-date textbooks and textbooks with basic teachings of Quran and Sunnah and establishment of madrasas to build wise scholars and dedicated souls.</ListGroup.Item>
@@ -84,7 +84,7 @@ const About: NextPage = () => {
 
                     <ListGroup.Item as="li">  Collect unused medicines and distribute them among distressed patients through various booths.</ListGroup.Item>
 
-                    <ListGroup.Item as="li"> Distribution of Iftar items to the needy during the month of Ramadan and organization of Da'wah.</ListGroup.Item>
+                    <ListGroup.Item as="li"> Distribution of Iftar items to the needy during the month of Ramadan and organization of Da&apos;wah.</ListGroup.Item>
 
                     <ListGroup.Item as="li">Distribution of Fitra, clothes and Eid items on the occasion of Eid among the needy.</ListGroup.Item>
 
@@ -100,7 +100,7 @@ const About: NextPage = () => {
                     <ListGroup.Item as="li">To co-operate and rehabilitate street children and the disabled.</ListGroup.Item>
                     <ListGroup.Item as="li">Teaching and upbringing of widows and taking care of them till they become orphans.</ListGroup.Item>
                   </ListGroup>
-                  <h4>Da'wah activities</h4>
+                  <h4>Da&apos;wah activities</h4>
                   <ListGroup as="ol">
                     <ListGroup.Item as="li">Construction and management of ideal mosques to build a peaceful and prosperous society.</ListGroup.Item>
                     <ListGroup.Item as="li">Weekly, monthly, annual and occasional waz-mahfils, open exchange of views and seminars are organized at mosques, madrasas, district auditoriums, upazila parishad auditoriums, grounds, etc. in different areas to highlight the correct views of Islam.</ListGroup.Item>

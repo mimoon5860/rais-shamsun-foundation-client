@@ -11,7 +11,7 @@ const PrivacyPolicy: NextPage = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div>
-        <h1 className='text-center contact-header py-3 text-white'>About</h1>
+        <h1 className='text-center page-header py-3 text-white'>About</h1>
       </div>
       <Container>
         <div>

@@ -10,7 +10,7 @@ const Donation: NextPage = () => {
         <meta name="description" content="Donation page of Rais-Shamsun Foundation" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <h1 className='text-center contact-header py-3 text-white'>Together Let's Make A Change</h1>
+      <h1 className='text-center page-header py-3 text-white'>Together Let&apos;s Make A Change</h1>
       <Container>
         <Row>
           <Col md={6}>

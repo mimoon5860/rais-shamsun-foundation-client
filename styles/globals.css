@@ -9,6 +9,9 @@ body {
   --main-color:#0A3B1E;
   --main-another-color:#008E48;
 }
+.page-header{
+  background-color: var(--main-another-color);
+}
 
 a {
   color: inherit;

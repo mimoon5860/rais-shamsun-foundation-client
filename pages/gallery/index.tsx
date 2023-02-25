@@ -9,7 +9,7 @@ const Gallery: NextPage = () => {
         <meta name="description" content="Gallery page of Rais-Shamsun Foundation" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <h1 className='text-center contact-header py-3 text-white'>Gallery</h1>
+      <h1 className='text-center page-header py-3 text-white'>Gallery</h1>
     </div>
   )
 }

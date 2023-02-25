@@ -25,11 +25,6 @@
             "path": "/gallery"
         },
         {
-            "id": 7,
-            "name": "Blogs",
-            "path": "/blogs"
-        },
-        {
             "id": 2,
             "name": "About",
             "path": "/about"

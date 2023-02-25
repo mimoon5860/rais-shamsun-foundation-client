@@ -5,7 +5,7 @@ const HomeComponent = () => {
   return (
     <main>
       {/* Slider section  */}
-      <Container className="my-4">
+      {/* <Container className="my-4">
         <Carousel>
           <Carousel.Item>
             <img
@@ -36,7 +36,7 @@ const HomeComponent = () => {
             />
           </Carousel.Item>
         </Carousel>
-      </Container>
+      </Container> */}
       <Container className="my-4">
         <Row>
           <Col md={4}>
@@ -93,7 +93,7 @@ const HomeComponent = () => {
                 <Card.Body>
                   <Card.Title className="fs-4">Monthly Donation Fund</Card.Title>
                   <Card.Text style={{ textAlign: 'justify' }}>
-                    The monthly donor member of the Rais-Shamsun Foundation is a permanent donor of the organization. Regular donations of the monthly donor members are a means of sustainable income for the multi-faceted da'wah activities and overall development of the Rais-Shamsun Foundation.
+                    The monthly donor member of the Rais-Shamsun Foundation is a permanent donor of the organization. Regular donations of the monthly donor members are a means of sustainable income for the multi-faceted da&apos;wah activities and overall development of the Rais-Shamsun Foundation.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -104,7 +104,7 @@ const HomeComponent = () => {
                 <Card.Body>
                   <Card.Title className="fs-4">Orphan Fund</Card.Title>
                   <Card.Text style={{ textAlign: 'justify' }}>
-                    Taking care of the orphans in the hope of Allah's pleasure and reward is an important act of worship to Allah and it is also one of the best sectors of charity.
+                    Taking care of the orphans in the hope of Allah&apos;s pleasure and reward is an important act of worship to Allah and it is also one of the best sectors of charity.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -142,7 +142,7 @@ const HomeComponent = () => {
               <Card.Body>
                 <Card.Title className="fs-2">Iftar and Ramadan food distribution</Card.Title>
                 <Card.Text style={{ textAlign: 'justify' }}>
-                  The Rais-Shamsun Foundation organizes a session called 'Majlisus Sunnah' every month to promote pure Islamic teachings, awareness and life-oriented religiosity, ideals, ethics and religious awareness among the common people based on the Qur'an and Sahih Sunnah.
+                  The Rais-Shamsun Foundation organizes a session called &apos;Majlisus Sunnah&apos; every month to promote pure Islamic teachings, awareness and life-oriented religiosity, ideals, ethics and religious awareness among the common people based on the Qur&apos;an and Sahih Sunnah.
                 </Card.Text>
                 <Button variant="success">Read More</Button>
               </Card.Body>
@@ -169,7 +169,7 @@ const HomeComponent = () => {
               <Card.Body>
               <iframe width="100%" height="250" src="https://www.youtube.com/embed/NtAEj3J2PeE" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
                 <Card.Text>
-                Rais-Shamsun Foundation's food distribution among distressed and helpless families report 2019
+                Rais-Shamsun Foundation&apos;s food distribution among distressed and helpless families report 2019
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -179,7 +179,7 @@ const HomeComponent = () => {
               <Card.Body>
               <iframe width="100%" height="250" src="https://www.youtube.com/embed/gS7S1KAmCpI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
                 <Card.Text>
-                Rais-Shamsun Foundation's Qurbani Report 2019
+                Rais-Shamsun Foundation&apos;s Qurbani Report 2019
                 </Card.Text>
               </Card.Body>
             </Card>
